@@ -9,7 +9,8 @@ public class VarifyCard
 		int cardNum;
 		int digit[] = new int[8];
 		Scanner scan = new Scanner(System.in);
-		
+		System.out.println("digit.length =" + digit.length);
+		System.out.println("digit.length -1 =" + (digit.length-1));
 		System.out.println("Enter your 8 digit number");
 		cardNum = scan.nextInt();
 		int index;
