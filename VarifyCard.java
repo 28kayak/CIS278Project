@@ -18,13 +18,10 @@ public class VarifyCard
 			digit[index] =(int)(cardNum/Math.pow(10, index))%10;
 			System.out.printf("\ndigit[%d] = %d",index,digit[index]);
 		}
-		//System.out.printf("\ndigit[0] = %d",digit[0]);
-		
 		int i=0;
 		int oddSum = 0;
 		int evenSum = 0;
 		int count =0;
-		System.out.println("\nfor looping");
 		
 		 // •Starting from the rightmost digit,  form the sum of every other digit. 
 		//calculate sum of even index
@@ -33,8 +30,7 @@ public class VarifyCard
 			
 			System.out.printf("\ndigit[%d] = %d",i,digit[i]);
 			evenSum += digit[i];
-			//System.out.printf("\nAfter calc\ndigit[%d] = %d",i,digit[i]);
-			//
+			
 			System.out.printf("\nEvenSum = %d",evenSum);
 		}
 		System.out.printf("\nResult of evenSum = %d\n",evenSum);
@@ -57,17 +53,10 @@ public class VarifyCard
 			System.out.printf("\noddSum = %d",oddSum);
 			System.out.printf("\noddSum2 = %d",oddSum2);
 			System.out.printf("\ndoubleingSum = %d\n",doubleingSum);
-			/*
-			//oddDigit[count] =(int) (2 * digit[count]);//Substitute odd-index
-			oddSum = (int) (oddDigit[count]/10);
-			oddSum2 = (int)(oddDigit[count]%10);
-			System.out.printf("\noddSum = %d\n",oddSum);
-		    System.out.printf("the reminder  = %d\n",oddSum2);
-		
-		*/
+			
 		}
 		int finalResult = doubleingSum + evenSum;
-		System.out.printf("the result = %d", finalResult );
+		
 		if(finalResult %10 == 0)
 		{
 			System.out.printf("\nthis card number is valid: %d ", cardNum );
@@ -76,16 +65,7 @@ public class VarifyCard
 		{
 			System.out.printf("\nthis card number is invalid %d", cardNum);
 		}
-		/*
-		for(int counter = 0; counter < oddDigit.length-1 ; counter +=2)
-		{
-			System.out.println(oddDigit[counter]);
-		}
-		System.out.printf("\nResult of oddSum = %d",oddSum);
 		
-		
-		System.out.printf("\nResult of oddSum = %d",oddSum);
-		*/
 	}//main
 
 }//class
